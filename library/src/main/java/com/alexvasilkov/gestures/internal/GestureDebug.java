@@ -6,7 +6,8 @@ public class GestureDebug {
     private static boolean debugAnimator;
     private static boolean drawDebugOverlay;
 
-    private GestureDebug() {}
+    private GestureDebug() {
+    }
 
     @SuppressWarnings("WeakerAccess") // Public API (kinda)
     public static boolean isDebugFps() {

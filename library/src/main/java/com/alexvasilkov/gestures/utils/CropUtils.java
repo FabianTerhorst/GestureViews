@@ -12,12 +12,13 @@ import com.alexvasilkov.gestures.State;
 
 public class CropUtils {
 
-    private CropUtils() {}
+    private CropUtils() {
+    }
 
     /**
      * Crops image drawable into bitmap according to current image position.
      *
-     * @param drawable Image drawable
+     * @param drawable   Image drawable
      * @param controller Image controller
      * @return Cropped image part
      */
@@ -32,7 +33,7 @@ public class CropUtils {
      * Crops image drawable into bitmap according to current image position.
      *
      * @param drawable Image drawable
-     * @param state Image state
+     * @param state    Image state
      * @param settings Image settings
      * @return Cropped image part
      * @deprecated Use {@link #crop(Drawable, GestureController)} instead

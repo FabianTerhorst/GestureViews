@@ -3,6 +3,7 @@ package com.alexvasilkov.gestures.transition.internal;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.OnChildAttachStateChangeListener;
+
 import android.view.View;
 
 import com.alexvasilkov.gestures.transition.tracker.FromTracker;
@@ -10,7 +11,7 @@ import com.alexvasilkov.gestures.transition.tracker.FromTracker;
 public class FromRecyclerViewListener<ID> extends FromBaseListener<RecyclerView, ID> {
 
     public FromRecyclerViewListener(final RecyclerView list, final FromTracker<ID> tracker,
-            boolean autoScroll) {
+                                    boolean autoScroll) {
 
         super(list, tracker, autoScroll);
 

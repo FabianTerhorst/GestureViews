@@ -2,8 +2,10 @@ package com.alexvasilkov.gestures;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import android.util.AttributeSet;
 import android.view.Gravity;
 
@@ -16,7 +18,7 @@ import com.alexvasilkov.gestures.views.interfaces.GestureView;
  * Required settings are viewport size ({@link #setViewport(int, int)})
  * and image size {@link #setImage(int, int)}
  */
-@SuppressWarnings({ "WeakerAccess", "UnusedReturnValue", "SameParameterValue" }) // Public API
+@SuppressWarnings({"WeakerAccess", "UnusedReturnValue", "SameParameterValue"}) // Public API
 public class Settings {
 
     public static final float MAX_ZOOM = 2f;
@@ -220,7 +222,7 @@ public class Settings {
      * <p>
      * Should only be used when implementing custom {@link GestureView}.
      *
-     * @param width Viewport width
+     * @param width  Viewport width
      * @param height Viewport height
      * @return Current settings object for calls chaining
      */
@@ -234,7 +236,7 @@ public class Settings {
      * Setting movement area size. Viewport area will be used instead if no movement area is
      * specified.
      *
-     * @param width Movement area width
+     * @param width  Movement area width
      * @param height Movement area height
      * @return Current settings object for calls chaining
      */
@@ -250,7 +252,7 @@ public class Settings {
      * <p>
      * Should only be used when implementing custom {@link GestureView}.
      *
-     * @param width Image width
+     * @param width  Image width
      * @param height Image height
      * @return Current settings object for calls chaining
      */
@@ -339,7 +341,7 @@ public class Settings {
     /**
      * Same as {@link #setOverscrollDistance(float, float)} but accepts distance in DP.
      *
-     * @param context Context
+     * @param context     Context
      * @param distanceXDp Horizontal overscroll distance in dp
      * @param distanceYDp Vertical overscroll distance in dp
      * @return Current settings object for calls chaining

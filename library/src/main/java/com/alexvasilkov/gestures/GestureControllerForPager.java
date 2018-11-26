@@ -3,8 +3,10 @@ package com.alexvasilkov.gestures;
 import android.annotation.SuppressLint;
 import android.graphics.Matrix;
 import android.graphics.RectF;
+
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.ViewPager;
+
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
@@ -169,7 +171,7 @@ public class GestureControllerForPager extends GestureController {
 
     @Override
     protected boolean onScroll(@NonNull MotionEvent e1, @NonNull MotionEvent e2,
-            float dx, float dy) {
+                               float dx, float dy) {
 
         if (viewPager == null) {
             return super.onScroll(e1, e2, dx, dy);
@@ -191,7 +193,7 @@ public class GestureControllerForPager extends GestureController {
 
     @Override
     protected boolean onFling(@NonNull MotionEvent e1, @NonNull MotionEvent e2,
-            float vx, float vy) {
+                              float vx, float vy) {
 
         return !hasViewPagerX() && super.onFling(e1, e2, vx, vy);
     }

@@ -1,7 +1,9 @@
 package com.alexvasilkov.gestures.animation;
 
 import android.os.Build;
+
 import androidx.annotation.NonNull;
+
 import android.view.View;
 import android.view.ViewTreeObserver;
 

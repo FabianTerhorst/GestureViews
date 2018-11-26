@@ -10,8 +10,10 @@ import android.graphics.RectF;
 import android.graphics.Shader.TileMode;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import android.util.AttributeSet;
 
 import com.alexvasilkov.gestures.animation.ViewPositionAnimator.PositionUpdateListener;

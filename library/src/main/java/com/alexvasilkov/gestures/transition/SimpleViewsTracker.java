@@ -7,7 +7,7 @@ import com.alexvasilkov.gestures.transition.tracker.SimpleTracker;
 /**
  * @deprecated Use {@link GestureTransitions} class with {@link SimpleTracker} instead.
  */
-@SuppressWarnings({ "unused", "deprecation" }) // Class is left for compatibility
+@SuppressWarnings({"unused", "deprecation"}) // Class is left for compatibility
 @Deprecated
 public abstract class SimpleViewsTracker implements ViewsTracker<Integer> {
 

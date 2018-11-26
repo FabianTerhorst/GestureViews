@@ -2,6 +2,7 @@ package com.alexvasilkov.gestures.transition;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -41,7 +42,7 @@ public class ViewsTransitionAnimator<ID> extends ViewsCoordinator<ID> {
     /**
      * @deprecated Use {@link GestureTransitions} instead.
      */
-    @SuppressWarnings({ "WeakerAccess", "DeprecatedIsStillUsed" }) // Public temporary API
+    @SuppressWarnings({"WeakerAccess", "DeprecatedIsStillUsed"}) // Public temporary API
     @Deprecated
     public ViewsTransitionAnimator() {
         addPositionUpdateListener(new PositionUpdateListener() {
@@ -57,7 +58,7 @@ public class ViewsTransitionAnimator<ID> extends ViewsCoordinator<ID> {
     /**
      * Requests 'from' and 'to' views for given ID and starts enter animation when views are ready.
      *
-     * @param id Item ID for views lookup
+     * @param id            Item ID for views lookup
      * @param withAnimation Whether to animate entering or immediately jump to entered state
      * @see ViewsCoordinator
      */
@@ -81,7 +82,7 @@ public class ViewsTransitionAnimator<ID> extends ViewsCoordinator<ID> {
      *
      * @param withAnimation Whether to animate entering or immediately jump to entered state
      */
-    @SuppressWarnings({ "unchecked", "SameParameterValue" })
+    @SuppressWarnings({"unchecked", "SameParameterValue"})
     public void enterSingle(boolean withAnimation) {
         // Passing 'NONE' Object instead of ID. Will fail if ID will be actually used.
         enter((ID) NONE, withAnimation);

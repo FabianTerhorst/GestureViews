@@ -2,6 +2,7 @@ package com.alexvasilkov.gestures.utils;
 
 import android.graphics.Matrix;
 import android.graphics.RectF;
+
 import androidx.annotation.Size;
 
 import com.alexvasilkov.gestures.State;
@@ -11,12 +12,13 @@ public class MathUtils {
     private static final Matrix tmpMatrix = new Matrix();
     private static final Matrix tmpMatrixInverse = new Matrix();
 
-    private MathUtils() {}
+    private MathUtils() {
+    }
 
     /**
      * Keeps value within provided bounds.
      *
-     * @param value Value to be restricted
+     * @param value    Value to be restricted
      * @param minValue Min value
      * @param maxValue Max value
      * @return Restricted value
@@ -28,8 +30,8 @@ public class MathUtils {
     /**
      * Interpolates from start value to the end one by given factor (from 0 to 1).
      *
-     * @param start Start value
-     * @param end End value
+     * @param start  Start value
+     * @param end    End value
      * @param factor Factor
      * @return Interpolated value
      */
@@ -41,9 +43,9 @@ public class MathUtils {
      * Interpolates from start rect to the end rect by given factor (from 0 to 1),
      * storing result into out rect.
      *
-     * @param out Interpolated rectangle (output)
-     * @param start Start rectangle
-     * @param end End rectangle
+     * @param out    Interpolated rectangle (output)
+     * @param start  Start rectangle
+     * @param end    End rectangle
      * @param factor Factor
      */
     public static void interpolate(RectF out, RectF start, RectF end, float factor) {
@@ -57,9 +59,9 @@ public class MathUtils {
      * Interpolates from start state to end state by given factor (from 0 to 1),
      * storing result into out state.
      *
-     * @param out Interpolated state (output)
-     * @param start Start state
-     * @param end End state
+     * @param out    Interpolated state (output)
+     * @param start  Start state
+     * @param end    End state
      * @param factor Factor
      */
     @SuppressWarnings("WeakerAccess") // Public API
@@ -73,17 +75,17 @@ public class MathUtils {
      * performed within specified pivot points, assuming start and end pivot points represent
      * same physical point on the image.
      *
-     * @param out Interpolated state (output)
-     * @param start Start state
+     * @param out         Interpolated state (output)
+     * @param start       Start state
      * @param startPivotX Pivot point's X coordinate in start state coordinates
      * @param startPivotY Pivot point's Y coordinate in start state coordinates
-     * @param end End state
-     * @param endPivotX Pivot point's X coordinate in end state coordinates
-     * @param endPivotY Pivot point's Y coordinate in end state coordinates
-     * @param factor Factor
+     * @param end         End state
+     * @param endPivotX   Pivot point's X coordinate in end state coordinates
+     * @param endPivotY   Pivot point's Y coordinate in end state coordinates
+     * @param factor      Factor
      */
     public static void interpolate(State out, State start, float startPivotX, float startPivotY,
-            State end, float endPivotX, float endPivotY, float factor) {
+                                   State end, float endPivotX, float endPivotY, float factor) {
         out.set(start);
 
         if (!State.equals(start.getZoom(), end.getZoom())) {
@@ -122,7 +124,7 @@ public class MathUtils {
     }
 
     public static void computeNewPosition(@Size(2) float[] point,
-            State initialState, State finalState) {
+                                          State initialState, State finalState) {
         initialState.get(tmpMatrix);
         tmpMatrix.invert(tmpMatrixInverse);
         tmpMatrixInverse.mapPoints(point);

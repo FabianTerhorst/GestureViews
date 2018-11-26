@@ -1,6 +1,7 @@
 package com.alexvasilkov.gestures.transition.tracker;
 
 import androidx.annotation.NonNull;
+
 import android.view.View;
 
 /**

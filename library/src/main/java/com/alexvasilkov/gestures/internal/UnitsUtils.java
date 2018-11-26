@@ -5,7 +5,8 @@ import android.util.TypedValue;
 
 public class UnitsUtils {
 
-    private UnitsUtils() {}
+    private UnitsUtils() {
+    }
 
     public static float toPixels(Context context, float value) {
         return toPixels(context, TypedValue.COMPLEX_UNIT_DIP, value);

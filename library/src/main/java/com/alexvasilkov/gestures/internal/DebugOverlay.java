@@ -33,7 +33,8 @@ public class DebugOverlay {
 
     private static Field stateSourceField;
 
-    private DebugOverlay() {}
+    private DebugOverlay() {
+    }
 
     public static void drawDebug(View view, Canvas canvas) {
         final GestureController controller = ((GestureView) view).getController();
@@ -97,7 +98,7 @@ public class DebugOverlay {
     }
 
     private static void drawText(Canvas canvas, Settings settings, String text,
-            int color, float textSize) {
+                                 int color, float textSize) {
         // Text settings
         paint.setTextSize(textSize);
         paint.setTypeface(Typeface.MONOSPACE);

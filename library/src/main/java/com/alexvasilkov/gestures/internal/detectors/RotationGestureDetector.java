@@ -35,7 +35,7 @@ public class RotationGestureDetector {
      * Creates a RotationGestureDetector with the supplied listener.
      * You may only use this constructor from a {@link android.os.Looper Looper} thread.
      *
-     * @param context the application's context
+     * @param context  the application's context
      * @param listener the listener invoked for all the callbacks, this must not be null.
      * @throws NullPointerException if {@code listener} is null.
      */
@@ -135,7 +135,7 @@ public class RotationGestureDetector {
     /**
      * @return {@code true} if a rotation gesture is in progress
      */
-    @SuppressWarnings({ "unused", "WeakerAccess" })
+    @SuppressWarnings({"unused", "WeakerAccess"})
     // To keep similar to standard ScaleGestureDetector
     public boolean isInProgress() {
         return isInProgress;
@@ -190,7 +190,7 @@ public class RotationGestureDetector {
          * Responds to rotation events for a gesture in progress. Reported by pointer motion.
          *
          * @param detector The detector reporting the event - use this to retrieve extended info
-         * about event state.
+         *                 about event state.
          * @return Whether or not the detector should consider this event as handled. If an event
          * was not handled, the detector will continue to accumulate movement until an event is
          * handled. This can be useful if an application, for example, only wants to update
@@ -202,7 +202,7 @@ public class RotationGestureDetector {
          * Responds to the beginning of a rotation gesture. Reported by new pointers going down.
          *
          * @param detector The detector reporting the event - use this to retrieve extended info
-         * about event state.
+         *                 about event state.
          * @return Whether or not the detector should continue recognizing this gesture.
          * For example, if a gesture is beginning with a focal point outside of a region where
          * it makes sense, onRotationBegin() may return false to ignore the rest of the gesture.
@@ -217,7 +217,7 @@ public class RotationGestureDetector {
          * remaining on the screen.
          *
          * @param detector The detector reporting the event - use this to retrieve extended info
-         * about event state.
+         *                 about event state.
          */
         void onRotationEnd(RotationGestureDetector detector);
     }

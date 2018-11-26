@@ -3,8 +3,10 @@ package com.alexvasilkov.gestures.utils;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.RectF;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import android.view.View;
 
 import com.alexvasilkov.gestures.State;
@@ -12,7 +14,7 @@ import com.alexvasilkov.gestures.views.interfaces.ClipView;
 
 /**
  * Helper class to implement view clipping (with {@link ClipView} interface).
- *
+ * <p>
  * Usage: call {@link #clipView(RectF, float)} method when needed and override
  * {@link View#draw(Canvas)} method:
  * <pre>{@code

@@ -149,7 +149,7 @@ public class State {
      * </pre>
      * See <a href="http://stackoverflow.com/questions/4361242">here</a>.
      *
-     * @param updateZoom Whether to extract zoom from matrix
+     * @param updateZoom     Whether to extract zoom from matrix
      * @param updateRotation Whether to extract rotation from matrix
      */
     private void updateFromMatrix(boolean updateZoom, boolean updateRotation) {

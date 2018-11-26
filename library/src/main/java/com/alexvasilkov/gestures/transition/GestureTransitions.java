@@ -3,6 +3,7 @@ package com.alexvasilkov.gestures.transition;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.ViewPager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.View;
 import android.widget.ListView;
 
@@ -23,7 +24,8 @@ public class GestureTransitions<ID> {
     @SuppressWarnings("deprecation")
     private final ViewsTransitionAnimator<ID> animator = new ViewsTransitionAnimator<>();
 
-    private GestureTransitions() {}
+    private GestureTransitions() {
+    }
 
     public static <ID> GestureTransitions<ID> from(@NonNull RequestListener<ID> listener) {
         final GestureTransitions<ID> builder = new GestureTransitions<>();

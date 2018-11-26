@@ -3,6 +3,7 @@ package com.alexvasilkov.gestures.commons;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;

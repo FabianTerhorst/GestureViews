@@ -1,7 +1,9 @@
 package com.alexvasilkov.gestures.transition.internal;
 
 import android.graphics.Rect;
+
 import androidx.annotation.NonNull;
+
 import android.view.View;
 
 import com.alexvasilkov.gestures.animation.ViewPositionAnimator.PositionUpdateListener;

@@ -5,7 +5,9 @@ import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
+
 import androidx.annotation.NonNull;
+
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
@@ -55,7 +57,7 @@ public class ViewPosition {
     }
 
     private ViewPosition(@NonNull Rect view, @NonNull Rect viewport,
-            @NonNull Rect visible, @NonNull Rect image) {
+                         @NonNull Rect visible, @NonNull Rect image) {
         this.view = view;
         this.viewport = viewport;
         this.visible = visible;
@@ -150,7 +152,7 @@ public class ViewPosition {
      * Computes view position and stores it in given {@code pos}. Note, that view should be already
      * attached and laid out before calling this method.
      *
-     * @param pos Output position
+     * @param pos  Output position
      * @param view View for which we want to get on-screen location
      * @return true if view position is changed, false otherwise
      */
@@ -161,7 +163,7 @@ public class ViewPosition {
     /**
      * Computes minimal view position for given point.
      *
-     * @param pos Output view position
+     * @param pos   Output view position
      * @param point Target point
      */
     public static void apply(@NonNull ViewPosition pos, @NonNull Point point) {
@@ -182,7 +184,7 @@ public class ViewPosition {
         String viewportStr = viewport.flattenToString();
         String visibleStr = visible.flattenToString();
         String imageStr = image.flattenToString();
-        return TextUtils.join(DELIMITER, new String[] {
+        return TextUtils.join(DELIMITER, new String[]{
                 viewStr, viewportStr, visibleStr, imageStr
         });
     }

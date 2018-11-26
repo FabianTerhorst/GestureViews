@@ -2,6 +2,7 @@ package com.alexvasilkov.gestures.transition.internal;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.ViewPager;
+
 import android.view.View;
 import android.view.ViewGroup;
 

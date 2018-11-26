@@ -8,9 +8,11 @@ import android.graphics.Matrix;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.ImageView;
@@ -132,7 +134,7 @@ public class GestureImageView extends ImageView
      * @param listener Snapshot listener
      * @deprecated Use {@link #crop()} method instead.
      */
-    @SuppressWarnings({ "deprecation", "unused" }) // Public API
+    @SuppressWarnings({"deprecation", "unused"}) // Public API
     @Deprecated
     public void getSnapshot(OnSnapshotLoadedListener listener) {
         if (getDrawable() != null) {

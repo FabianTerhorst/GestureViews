@@ -1,6 +1,7 @@
 package com.alexvasilkov.gestures.commons;
 
 import androidx.viewpager.widget.ViewPager;
+
 import android.view.View;
 
 /**

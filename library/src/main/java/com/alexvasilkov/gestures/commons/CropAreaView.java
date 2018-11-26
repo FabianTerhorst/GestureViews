@@ -10,7 +10,9 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.os.Build;
+
 import androidx.annotation.ColorInt;
+
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
@@ -143,7 +145,7 @@ public class CropAreaView extends View {
      * Sets number of horizontal and vertical rules. No rules by default.
      *
      * @param horizontalRules Number of horizontal rules
-     * @param verticalRules Number of vertical rules
+     * @param verticalRules   Number of vertical rules
      */
     public void setRulesCount(int horizontalRules, int verticalRules) {
         this.horizontalRules = horizontalRules;

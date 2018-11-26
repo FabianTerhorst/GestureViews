@@ -3,6 +3,7 @@ package com.alexvasilkov.gestures.transition;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.ViewPager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.View;
 import android.widget.ListView;
 
@@ -15,7 +16,7 @@ import com.alexvasilkov.gestures.transition.tracker.IntoTracker;
 /**
  * @deprecated Use {@link GestureTransitions} instead.
  */
-@SuppressWarnings({ "deprecation", "unused", "WeakerAccess" }) // Class is left for compatibility
+@SuppressWarnings({"deprecation", "unused", "WeakerAccess"}) // Class is left for compatibility
 @Deprecated
 public class ViewsTransitionBuilder<ID> {
 

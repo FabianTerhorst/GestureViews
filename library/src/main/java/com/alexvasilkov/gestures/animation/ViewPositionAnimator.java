@@ -3,8 +3,10 @@ package com.alexvasilkov.gestures.animation;
 import android.graphics.Matrix;
 import android.graphics.Point;
 import android.graphics.RectF;
+
 import androidx.annotation.FloatRange;
 import androidx.annotation.NonNull;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -192,7 +194,7 @@ public class ViewPositionAnimator {
      * Note, if {@code from} view was changed (i.e. during list adapter refresh) you should
      * update to new view using {@link #update(View)} method.
      *
-     * @param from 'From' view
+     * @param from          'From' view
      * @param withAnimation Whether to animate entering or immediately jump to entered state
      */
     public void enter(@NonNull View from, boolean withAnimation) {
@@ -210,7 +212,7 @@ public class ViewPositionAnimator {
      * Note, if {@code from} view position was changed (i.e. during list adapter refresh) you
      * should update to new view using {@link #update(ViewPosition)} method.
      *
-     * @param fromPos 'From' view position
+     * @param fromPos       'From' view position
      * @param withAnimation Whether to animate entering or immediately jump to entered state
      */
     public void enter(@NonNull ViewPosition fromPos, boolean withAnimation) {
@@ -446,7 +448,7 @@ public class ViewPositionAnimator {
      * <p>
      * Only use this method if you understand what you do.
      *
-     * @param state Target ('to') state
+     * @param state    Target ('to') state
      * @param position Target ('to') position
      * @see #getToPosition()
      */
@@ -475,13 +477,13 @@ public class ViewPositionAnimator {
      * it will cleanup all internal stuff. So you will need to call {@link #enter(View, boolean)}
      * or {@link #enter(ViewPosition, boolean)} again in order to continue using animator.
      *
-     * @param pos Current position
+     * @param pos     Current position
      * @param leaving Whether we we are in exiting direction ({@code true}) or in entering
-     * ({@code false})
+     *                ({@code false})
      * @param animate Whether we should start animating from given position and in given direction
      */
     public void setState(@FloatRange(from = 0f, to = 1f) float pos,
-            boolean leaving, boolean animate) {
+                         boolean leaving, boolean animate) {
         if (!isActivated) {
             throw new IllegalStateException(
                     "You should call enter(...) before calling setState(...)");
@@ -792,10 +794,10 @@ public class ViewPositionAnimator {
 
     public interface PositionUpdateListener {
         /**
-         * @param position Position within range {@code [0, 1]}, where {@code 0} is for
-         * initial (from) position and {@code 1} is for final (to) position.
+         * @param position  Position within range {@code [0, 1]}, where {@code 0} is for
+         *                  initial (from) position and {@code 1} is for final (to) position.
          * @param isLeaving {@code false} if transitioning from initial to final position
-         * (entering) or {@code true} for reverse transition.
+         *                  (entering) or {@code true} for reverse transition.
          */
         void onPositionUpdate(float position, boolean isLeaving);
     }

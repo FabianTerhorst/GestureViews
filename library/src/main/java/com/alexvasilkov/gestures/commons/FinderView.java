@@ -9,7 +9,9 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.os.Build;
+
 import androidx.annotation.ColorInt;
+
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
@@ -103,7 +105,7 @@ public class FinderView extends View {
     /**
      * Sets borders width in particular units. Default value is {@link #DEFAULT_BORDER_WIDTH} dp.
      *
-     * @param unit One of {@link TypedValue}.COMPLEX_UNIT_* constants
+     * @param unit  One of {@link TypedValue}.COMPLEX_UNIT_* constants
      * @param width Finder area borders width in given unit
      */
     public void setBorderWidth(int unit, float width) {
